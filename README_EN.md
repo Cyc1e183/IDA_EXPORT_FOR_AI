@@ -25,9 +25,6 @@ This script is a secondary development based on the file-first AI reverse-engine
 
 Typical use cases:
 
-- Firmware security analysis
-- IoT router / gateway / camera web-service reverse engineering
-- Hidden API and handler discovery
 - AI-assisted vulnerability triage
 - Bulk pseudo-code export for Cursor / Claude Code / Codex / other AI IDEs
 - Offline evidence packaging from IDA databases
@@ -222,8 +219,6 @@ This helps AI tools discover:
 - Callback arrays
 - String pointers
 - Import / data / code pointers
-
-This is especially useful for firmware web services, command dispatchers, CGI handlers, and protocol parsers.
 
 ### 7. Strings, imports, exports, and optional memory
 
@@ -598,15 +593,6 @@ MANIFEST_FUNCTIONS 80
 ERRORS 0
 WARNINGS 0
 ```
-
----
-
-## Security Notes
-
-- Only analyze firmware and binaries you are authorized to inspect.
-- Do not upload vendor firmware exports to third-party AI services unless your policy allows it.
-- Review exported files for secrets before sharing.
-- `memory/` may contain sensitive raw data and is disabled by default.
 
 ---
 
