@@ -610,14 +610,6 @@ WARNINGS 0
 
 ---
 
-## License
-
-Add a `LICENSE` file before publishing this script as a standalone GitHub repository.
-
-If this script is derived from another project or includes third-party code, make sure the license is compatible.
-
----
-
 ## Credits
 
 This script is inspired by file-first AI reverse-engineering workflows such as [IDA-NO-MCP](https://github.com/P4nda0s/IDA-NO-MCP). This version further emphasizes function-name evidence alignment, manifest traceability, indexed fallback, pointer-table export, and AI vulnerability-agent evidence citation.
