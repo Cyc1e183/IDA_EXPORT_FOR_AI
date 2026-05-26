@@ -9,6 +9,8 @@
 [![Hex--Rays](https://img.shields.io/badge/Hex--Rays-optional-orange.svg)](https://hex-rays.com/decompiler/)
 [![AI Ready](https://img.shields.io/badge/AI-ready-brightgreen.svg)](#为什么需要这个脚本)
 
+
+简体中文 | [English](README_EN.md)
 </div>
 
 ---
@@ -269,23 +271,23 @@ export-for-ai/
 
 ### 文件说明
 
-| 文件 / 目录                | 说明                                                |
-| -------------------------- | --------------------------------------------------- |
-| `decompile/`               | Hex-Rays 伪代码，每个成功反编译函数一个 `.c` 文件。 |
-| `disassembly/`             | 反编译失败或不可用时的 `.asm` fallback。            |
-| `decompile_manifest.json`  | 地址 / 函数名 / 文件 / 调用关系权威映射。           |
-| `disassembly_fallback.txt` | fallback 函数列表和原因。                           |
-| `decompile_failed.txt`     | 反编译和 fallback 都失败的函数。                    |
-| `decompile_skipped.txt`    | 被跳过的库函数或无效函数。                          |
-| `function_index.txt`       | 人类可读的函数索引。                                |
-| `strings.txt`              | 字符串导出。                                        |
-| `imports.txt`              | 导入表导出。                                        |
-| `exports.txt`              | 导出表导出。                                        |
-| `pointers.txt`             | 静态指针引用，用于间接调用和表结构分析。            |
-| `.export_progress`         | 增量导出进度。                                      |
-| `.currently_processing`    | crash / hang 恢复 marker。                          |
-| `.decompile_blacklist`     | 跳过 Hex-Rays、直接 fallback 的函数黑名单。         |
-| `memory/`                  | 可选内存 hexdump 分片。                             |
+| 文件 / 目录 | 说明 |
+|---|---|
+| `decompile/` | Hex-Rays 伪代码，每个成功反编译函数一个 `.c` 文件。 |
+| `disassembly/` | 反编译失败或不可用时的 `.asm` fallback。 |
+| `decompile_manifest.json` | 地址 / 函数名 / 文件 / 调用关系权威映射。 |
+| `disassembly_fallback.txt` | fallback 函数列表和原因。 |
+| `decompile_failed.txt` | 反编译和 fallback 都失败的函数。 |
+| `decompile_skipped.txt` | 被跳过的库函数或无效函数。 |
+| `function_index.txt` | 人类可读的函数索引。 |
+| `strings.txt` | 字符串导出。 |
+| `imports.txt` | 导入表导出。 |
+| `exports.txt` | 导出表导出。 |
+| `pointers.txt` | 静态指针引用，用于间接调用和表结构分析。 |
+| `.export_progress` | 增量导出进度。 |
+| `.currently_processing` | crash / hang 恢复 marker。 |
+| `.decompile_blacklist` | 跳过 Hex-Rays、直接 fallback 的函数黑名单。 |
+| `memory/` | 可选内存 hexdump 分片。 |
 
 ---
 
@@ -375,11 +377,11 @@ idat.exe -A "-Sida_export_for_ai.py ./export-for-ai 0 0" ./httpd
 
 参数说明：
 
-| 位置 | 参数                 | 示例              | 说明                                  |
-| ---- | -------------------- | ----------------- | ------------------------------------- |
-| 1    | `export_dir`         | `./export-for-ai` | 输出目录。                            |
-| 2    | `skip_auto_analysis` | `0` 或 `1`        | `1` 表示跳过 `ida_auto.auto_wait()`。 |
-| 3    | `force_reexport`     | `0` 或 `1`        | `1` 表示忽略旧进度并强制重新导出。    |
+| 位置 | 参数 | 示例 | 说明 |
+|---|---|---|---|
+| 1 | `export_dir` | `./export-for-ai` | 输出目录。 |
+| 2 | `skip_auto_analysis` | `0` 或 `1` | `1` 表示跳过 `ida_auto.auto_wait()`。 |
+| 3 | `force_reexport` | `0` 或 `1` | `1` 表示忽略旧进度并强制重新导出。 |
 
 ### 首次导出推荐命令
 
@@ -616,4 +618,5 @@ WARNINGS 0
 ## Credits
 
 本脚本的设计受文件优先型 AI 逆向工作流启发，例如 [IDA-NO-MCP](https://github.com/P4nda0s/IDA-NO-MCP)。当前实现进一步强调函数名证据对应、manifest 追踪、fallback 可索引、指针表导出以及 AI 漏洞分析 Agent 的证据引用能力。
+
 
