@@ -607,14 +607,6 @@ WARNINGS 0
 
 ---
 
-## License
-
-发布为独立 GitHub 仓库前，请根据你的分发需求添加 `LICENSE` 文件。
-
-如果该脚本来自其他项目或包含第三方代码，请确认许可证兼容。
-
----
-
 ## Credits
 
 本脚本的设计受文件优先型 AI 逆向工作流启发，例如 [IDA-NO-MCP](https://github.com/P4nda0s/IDA-NO-MCP)。当前实现进一步强调函数名证据对应、manifest 追踪、fallback 可索引、指针表导出以及 AI 漏洞分析 Agent 的证据引用能力。
