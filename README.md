@@ -1,7 +1,6 @@
-IDA EXPORT FOR AI
-
 <div align="center">
-
+**IDA EXPORT FOR AI**
+        
 **面向 AI 逆向分析的 IDA 导出脚本：导出伪代码、反汇编 fallback、调用关系、字符串、导入导出、指针引用与可选内存上下文。**
 
 [![IDA Pro](https://img.shields.io/badge/IDA%20Pro-9.x-purple.svg)](https://hex-rays.com/ida-pro/)
